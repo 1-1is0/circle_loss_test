@@ -37,7 +37,7 @@ class MyResNet18(nn.Module):
         if embedding and self.embedding_reduction:
             x = self.fc_embeding_reduction(x)
             # TODO remove for circleLoss
-            x = torch.nn.functional.normalize(x)
+            # x = torch.nn.functional.normalize(x)
         if not embedding:
             x = self.classifier(x)
         return x
